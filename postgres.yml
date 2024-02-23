@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+spec:
+  selector:
+    matchLabels:
+      app: db
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+      - name: db
+        image: postgres:latest
+        ports: 
+         - containerPort: 5432
+        env:
+         - name: POSTGRES_USER 
+           value: postgres
+         - name: POSTGRES_PASSWORD
+           value: postgres
+        volumeMounts:
+          - name: data
+            mountPath: /var/lib/postgresql/data
+      volumes:
+       - name: data
+         - /Users/dsilvamarsh/git/tmp/postgres

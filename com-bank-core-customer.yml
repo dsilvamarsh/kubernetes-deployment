@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: com-bank-core-customer
-        image: com-bank-core-customer:latest
+        image: dsilvamarsh/com-bank-core-customer:latest
         ports:
         - containerPort: 8080
