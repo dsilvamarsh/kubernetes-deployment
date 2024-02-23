@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: com-bank-core-customer
+spec:
+  selector:
+    matchLabels:
+      app: com-bank-core-customer:latest
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: om-bank-core-customer
+    spec:
+      containers:
+      - name: om-bank-core-customer
+        image: om-bank-core-customer:latest
+        ports:
+        - containerPort: 8080
