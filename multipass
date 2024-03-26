@@ -1,0 +1,17 @@
+#we will be using multipass to start a virtual machine 
+#homebrew multipass
+#apt-get install multipass
+node-0 : multipass launch 22.04 -v -c 2 -d 50G -m 4G -n node-0 --mount /Users/dsilvamarsh/workspace/data/multipass/node-0:/var/data
+node-1 : multipass launch 22.04 -v -c 2 -d 50G -m 4G -n node-1 --mount /Users/dsilvamarsh/workspace/data/multipass/node-1:/var/data
+
+#Install microk8s
+sudo snap install microk8s --classic --channel=1.29
+sudo usermod -a -G microk8s $USER
+sudo mkdir -p ~/.kube
+sudo chown -f -R $USER ~/.kube
+
+Restart machine
+Cluster mode
+https://microk8s.io/docs/clustering
+connecting from personal kubectl to the cluster
+https://microk8s.io/docs/working-with-kubectl
