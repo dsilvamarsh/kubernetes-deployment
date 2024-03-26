@@ -9,4 +9,4 @@ As a pattern to work with kubernates.
 
 
 # Application data would be stored under the path it will be the base path for all my work and you need to replace it with yours
-path : /Users/dsilvamarsh/workspace/data
+path : /Users/dsilvamarsh/workspace/data/jenkins
