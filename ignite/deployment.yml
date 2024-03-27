@@ -26,8 +26,8 @@ spec:
           value: file:///ignite/config/node-configuration.xml
         resources:
           limits:
-            memory: "400Mi"
-            cpu: "100m"
+            memory: "500Mi"
+            cpu: "200m"
         ports:
         # Ports to open.
         - containerPort: 47100 # communication SPI port

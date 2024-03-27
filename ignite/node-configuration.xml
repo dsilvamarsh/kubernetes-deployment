@@ -21,5 +21,17 @@
             </property>
         </bean>
     </property>
+    <property name="cacheConfiguration">
+        <bean class="org.apache.ignite.configuration.CacheConfiguration">
+            <property name="name" value="names"/>
+            <property name="cacheMode" value="PARTITIONED"/>
+            <property name="backups" value="2"/>
+            <property name="rebalanceMode" value="SYNC"/>
+            <property name="writeSynchronizationMode" value="FULL_SYNC"/>
+            <property name="partitionLossPolicy" value="READ_ONLY_SAFE"/>
+            <!-- Other parameters -->
+        </bean>
+    </property>
 </bean>
+
 </beans>

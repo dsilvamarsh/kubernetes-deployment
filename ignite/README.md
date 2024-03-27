@@ -6,3 +6,7 @@ kubectl create -f service.xml
 kubectl create -f cluster-role.xml
 kubectl create configmap ignite-config -n devops-tools --from-file=node-configuration.xml
 kubectl create -f deployment.xml
+
+
+
+# NOTE : We would need to create a name sapce defined in the jenkins folder 

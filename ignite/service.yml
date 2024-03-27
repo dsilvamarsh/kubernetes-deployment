@@ -8,11 +8,12 @@ metadata:
   labels:
     app: ignite
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: rest
       port: 8080
       targetPort: 8080
+      nodePort: 30100
     - name: thinclients
       port: 10800
       targetPort: 10800
