@@ -26,3 +26,9 @@ subjects:
 - kind: ServiceAccount
   name: ignite
   namespace: devops-tools
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ignite
+  namespace: devops-tools

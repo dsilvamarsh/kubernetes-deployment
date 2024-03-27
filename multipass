@@ -15,3 +15,10 @@ Cluster mode
 https://microk8s.io/docs/clustering
 connecting from personal kubectl to the cluster
 https://microk8s.io/docs/working-with-kubectl
+
+
+enable kubernates dashboard
+
+microk8s enable dashboard
+
+microk8s dashboard-proxy

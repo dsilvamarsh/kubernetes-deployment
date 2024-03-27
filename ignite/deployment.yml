@@ -4,7 +4,7 @@ metadata:
   name: ignite-cluster
   namespace: devops-tools
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: ignite
@@ -17,16 +17,17 @@ spec:
       terminationGracePeriodSeconds: 60000
       containers:
       - name: ignite-node
-        image: apacheignite/ignite:2.16.0
+        #image: apacheignite/ignite:2.16.0
+        image: apacheignite/ignite:2.16.0-jdk11-arm64
         env: 
-        - name: OPTION_LIB
+        - name: OPTION_LIBS
           value: ignite-kubernetes,ignite-rest-http
         - name: CONFIG_URI
           value: file:///ignite/config/node-configuration.xml
         resources:
           limits:
-            memory: "500Mi"
-            cpu: "200m"
+            memory: "200Mi"
+            cpu: "100m"
         ports:
         # Ports to open.
         - containerPort: 47100 # communication SPI port
