@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: com-bank-core-test-service
+  namespace: devops-tools
+spec:
+  type: NodePort
+  selector:
+    app: com-bank-core-test
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 31000
