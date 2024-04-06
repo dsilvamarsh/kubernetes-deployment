@@ -32,6 +32,15 @@
             <!-- Other parameters -->
         </bean>
     </property>
+    <property name="sqlConfiguration">
+        <bean class="org.apache.ignite.configuration.SqlConfiguration">
+            <property name="sqlSchemas">
+                <list>
+                    <value>payment</value>
+                </list>
+            </property>
+        </bean>
+    </property>
 </bean>
 
 </beans>
