@@ -13,6 +13,8 @@ spec:
       labels:
         app: ignite
     spec:
+      #hostNetwork: true
+      #dnsPolicy: ClusterFirstWithHostNet
       serviceAccountName: ignite
       terminationGracePeriodSeconds: 60000
       containers:
